@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "reLaxTron",
+    "slug": "relaxtron",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/app-icon.png",
+    "scheme": "relaxtron",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hxman.relaxtron"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permissions.BLUETOOTH",
+        "android.permissions.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT"
+      ],
+      "package": "com.hxman.relaxtron"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "expo": {
+      "web": {
+        "bundler": "metro"
+      },
+      "plugins": [
+        [
+          "react-native-ble-plx",
+          {
+            "isBackgroundEnabled": true,
+            "modes": [
+              "peripheral",
+              "central"
+            ],
+            "bluetoothAlwaysPermission": "Allow $(PRODUCT_NAME) to use bluetooth for connecting to robot"
+          }
+        ]
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/app-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "react-native-ble-plx"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "178ad285-8ee6-42d6-94f9-3ea96d1edb4d"
+      }
+    },
+    "owner": "hxman"
+  }
+}
